@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "presentation": {
+        "echo": false,
+        "reveal": "never",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": false,
+        "close": true
+    },
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "./go.sh",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "./run.sh",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "_quicksave",
+            "type": "shell",
+            "command": "/usr/bin/fish",
+            "args": [
+                "-c",
+                "git add .; git commit -m 'quicksave'; git push; exit"
+            ]
+        }
+    ]
+}
